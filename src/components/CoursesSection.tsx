@@ -1,24 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { Mic, Users, Lightbulb, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const courses = [
   {
-    icon: Mic,
-    title: "Public Speaking Mastery",
+    title: "Public Speaking",
     benefit: "Command attention. Speak with power. Become unforgettable.",
     wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20course",
   },
   {
-    icon: Users,
-    title: "Teamwork & Leadership",
-    benefit: "Lead teams. Build trust. Create real impact together.",
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Teamwork%20course",
+    title: "Entrepreneurship",
+    benefit: "Think like a founder. Build ideas into reality.",
+    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Entrepreneurship%20course",
   },
   {
-    icon: Lightbulb,
-    title: "Problem Solving Pro",
+    title: "Problem Solving",
     benefit: "Think critically. Solve fast. Outperform everyone.",
     wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Problem%20Solving%20course",
+  },
+  {
+    title: "Graphic Design",
+    benefit: "Create stunning visuals. Design like a pro.",
+    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
   },
 ];
 
@@ -35,24 +37,24 @@ const CoursesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {courses.map((c, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {courses.map((c) => (
             <div
               key={c.title}
-              className="card-glow group bg-card border border-border rounded-2xl p-8 flex flex-col justify-between space-y-6"
+              className="card-glow group bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
             >
-              <div className="space-y-4">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/15 text-primary">
-                  <c.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-bold">{c.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{c.benefit}</p>
+              <div className="bg-primary/10 aspect-[4/3] flex items-center justify-center">
+                <span className="text-4xl font-black text-primary/30">{c.title.charAt(0)}</span>
               </div>
-              <a href={c.wa} target="_blank" rel="noopener noreferrer">
-                <Button variant="whatsapp" className="w-full rounded-xl gap-2">
-                  WhatsApp Us <ArrowUpRight className="w-4 h-4" />
-                </Button>
-              </a>
+              <div className="p-6 flex flex-col flex-1 space-y-4">
+                <h3 className="text-lg font-bold">{c.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed flex-1">{c.benefit}</p>
+                <a href={c.wa} target="_blank" rel="noopener noreferrer">
+                  <Button variant="whatsapp" className="w-full rounded-xl gap-2">
+                    WhatsApp Us <ArrowUpRight className="w-4 h-4" />
+                  </Button>
+                </a>
+              </div>
             </div>
           ))}
         </div>
