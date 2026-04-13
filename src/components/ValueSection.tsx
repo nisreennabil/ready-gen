@@ -47,11 +47,11 @@ const ValueSection = () => {
               className="card-glow group relative bg-card border border-border rounded-2xl overflow-hidden"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={v.image}
                   alt={v.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6 space-y-2">
