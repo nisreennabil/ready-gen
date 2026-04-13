@@ -1,22 +1,28 @@
 import { Mic, Users, Lightbulb } from "lucide-react";
+import brandChoose from "@/assets/brand-choose.jpg";
+import brandProject from "@/assets/brand-project.jpg";
+import brandSkills from "@/assets/brand-skills.jpg";
 
 const values = [
   {
     icon: Mic,
-    title: "Public Speaking",
-    desc: "Speak with confidence. Own any room.",
+    title: "Real Skills, Not Theory",
+    desc: "We teach practical skills you can use today — not just textbooks.",
+    image: brandSkills,
     color: "primary",
   },
   {
     icon: Users,
-    title: "Teamwork",
-    desc: "Build real connections and leadership.",
+    title: "Hands-On Projects",
+    desc: "Learn by doing. Your first project starts day one.",
+    image: brandProject,
     color: "secondary",
   },
   {
     icon: Lightbulb,
-    title: "Problem Solving",
-    desc: "Think sharp. Act fast. Win.",
+    title: "Choose the Right Path",
+    desc: "We help you pick the right course for your goals.",
+    image: brandChoose,
     color: "primary",
   },
 ];
@@ -27,10 +33,10 @@ const ValueSection = () => {
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
-            Skills That <span className="text-gradient">Actually Matter</span>
+            Why <span className="text-gradient">Choose Us?</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            We don't teach useless theory. We build real-world confidence through 3 core pillars.
+            We don't teach useless theory. We build real-world confidence through action.
           </p>
         </div>
 
@@ -38,16 +44,19 @@ const ValueSection = () => {
           {values.map((v, i) => (
             <div
               key={v.title}
-              className="card-glow group relative bg-card border border-border rounded-2xl p-8 text-center space-y-4 overflow-hidden"
+              className="card-glow group relative bg-card border border-border rounded-2xl overflow-hidden"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${v.color === "secondary" ? "bg-secondary/15 text-secondary" : "bg-primary/15 text-primary"}`}>
-                  <v.icon className="w-8 h-8" />
-                </div>
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={v.image}
+                  alt={v.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 space-y-2">
                 <h3 className="text-xl font-bold">{v.title}</h3>
-                <p className="text-muted-foreground">{v.desc}</p>
+                <p className="text-muted-foreground text-sm">{v.desc}</p>
               </div>
             </div>
           ))}
