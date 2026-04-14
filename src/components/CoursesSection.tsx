@@ -4,6 +4,7 @@ import coursePublicSpeaking from "@/assets/course-public-speaking.jpg";
 import courseEntrepreneurship from "@/assets/course-entrepreneurship.jpg";
 import courseScholarship from "@/assets/course-scholarship.jpg";
 import courseGraphicDesign from "@/assets/course-graphic-design.jpg";
+import courseSoftSkills from "@/assets/course-soft-skills.jpg";
 
 const courses = [
   {
@@ -26,6 +27,11 @@ const courses = [
     image: courseGraphicDesign,
     wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
   },
+  {
+    title: "Soft Skills",
+    image: courseSoftSkills,
+    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Soft%20Skills%20course",
+  },
 ];
 
 const CoursesSection = () => {
@@ -41,7 +47,7 @@ const CoursesSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {courses.map((c) => (
             <div
               key={c.title}
