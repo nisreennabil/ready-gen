@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import popupBg from "@/assets/popup-bg.jpg";
 
 const WA_LINK = "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Summer%20Courses";
 
@@ -24,8 +25,12 @@ const PopupNotification = () => {
           <X className="w-5 h-5 text-primary-foreground" />
         </button>
 
-        <div className="bg-primary p-10 text-center space-y-6">
-          <div className="space-y-2">
+        <div
+          className="relative p-10 text-center space-y-6 bg-cover bg-center"
+          style={{ backgroundImage: `url(${popupBg})` }}
+        >
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="relative z-10 space-y-2">
             <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-widest">
               🔥 Limited Time
             </p>
@@ -34,7 +39,7 @@ const PopupNotification = () => {
             </h3>
           </div>
 
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="relative z-10">
             <Button variant="whatsapp" size="lg" className="rounded-xl gap-2 px-8 py-5 text-base mt-2">
               WhatsApp Us <ArrowUpRight className="w-4 h-4" />
             </Button>
