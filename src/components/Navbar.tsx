@@ -7,7 +7,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container flex items-center justify-between h-16">
-        <img src={logo} alt="Ready Gen" className="h-10 w-10 rounded-lg object-cover" />
+        <a href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <img src={logo} alt="Ready Gen" className="h-10 w-10 rounded-lg object-cover" />
+        </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           <a href="#courses" className="hover:text-foreground transition-colors">Courses</a>

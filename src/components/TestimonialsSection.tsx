@@ -14,7 +14,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
           {[review1, review2].map((img, i) => (
             <div
               key={i}
@@ -27,6 +27,18 @@ const TestimonialsSection = () => {
               />
             </div>
           ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto">
+          <div className="card-glow bg-card border border-border rounded-2xl overflow-hidden aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/9tI8HkyJ2rg"
+              title="Ready Gen Student Review"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>
