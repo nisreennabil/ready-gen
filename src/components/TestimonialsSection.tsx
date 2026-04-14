@@ -3,7 +3,7 @@ import review2 from "@/assets/review-2.jpeg";
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-24">
+    <section id="testimonials" className="py-24">
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
