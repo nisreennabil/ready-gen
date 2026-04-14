@@ -5,7 +5,7 @@ const WA_LINK = "https://wa.me/201007705216?text=Hey%20I%20want%20to%20connect%2
 
 const ConnectSection = () => {
   return (
-    <section className="py-16">
+    <section id="connect" className="py-16">
       <div className="container">
         <div className="text-center space-y-6 max-w-md mx-auto">
           <h2 className="text-2xl md:text-3xl font-black">

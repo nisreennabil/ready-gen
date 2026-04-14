@@ -3,7 +3,7 @@ import project2 from "@/assets/student-project-2.jpeg";
 
 const StudentProjectsSection = () => {
   return (
-    <section className="py-24 bg-gradient-hero">
+    <section id="projects" className="py-24 bg-gradient-hero">
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
