@@ -1,20 +1,21 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { translations, TranslationKey } from "@/lib/translations";
 
-type Language = "en" | "ar";
+export type Language = "en" | "ar";
 
-interface LanguageContextType {
+export interface LanguageContextType {
   lang: Language;
   setLang: (l: Language) => void;
   t: (key: TranslationKey) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<Language>(() => {
+    if (typeof window === "undefined") return "en";
     const saved = localStorage.getItem("rg_lang");
-    return (saved === "ar" || saved === "en") ? saved : "en";
+    return saved === "ar" || saved === "en" ? saved : "en";
   });
 
   useEffect(() => {
