@@ -1,43 +1,25 @@
-import { Mic, Users, Lightbulb } from "lucide-react";
 import brandChoose from "@/assets/brand-choose.jpg";
 import brandProject from "@/assets/brand-project.jpg";
 import brandSkills from "@/assets/brand-skills.jpg";
-
-const values = [
-  {
-    icon: Mic,
-    title: "Real Skills, Not Theory",
-    desc: "We teach practical skills you can use today — not just textbooks.",
-    image: brandSkills,
-    color: "primary",
-  },
-  {
-    icon: Users,
-    title: "Hands-On Projects",
-    desc: "Learn by doing. Your first project starts day one.",
-    image: brandProject,
-    color: "secondary",
-  },
-  {
-    icon: Lightbulb,
-    title: "Choose the Right Path",
-    desc: "We help you pick the right course for your goals.",
-    image: brandChoose,
-    color: "primary",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ValueSection = () => {
+  const { t } = useLanguage();
+
+  const values = [
+    { title: t("value_1_title"), desc: t("value_1_desc"), image: brandSkills },
+    { title: t("value_2_title"), desc: t("value_2_desc"), image: brandProject },
+    { title: t("value_3_title"), desc: t("value_3_desc"), image: brandChoose },
+  ];
+
   return (
     <section id="value" className="py-24">
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
-            Why <span className="text-gradient">Choose Us?</span>
+            {t("value_title_1")} <span className="text-gradient">{t("value_title_2")}</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            We don't teach useless theory. We build real-world confidence through action.
-          </p>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">{t("value_subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

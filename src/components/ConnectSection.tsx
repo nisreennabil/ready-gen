@@ -1,15 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WA_LINK = "https://wa.me/201007705216?text=Hey%20I%20want%20to%20connect%20with%20Ready%20Gen";
 
 const ConnectSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="connect" className="py-16">
       <div className="container">
         <div className="text-center space-y-6 max-w-md mx-auto">
           <h2 className="text-2xl md:text-3xl font-black">
-            <span className="text-gradient">Connect</span> With Us
+            <span className="text-gradient">{t("connect_title_1")}</span> {t("connect_title_2")}
           </h2>
           <div className="flex justify-center gap-4 flex-wrap">
             <a

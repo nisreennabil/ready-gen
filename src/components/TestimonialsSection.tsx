@@ -1,17 +1,18 @@
 import review1 from "@/assets/review-1.jpeg";
 import review2 from "@/assets/review-2.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TestimonialsSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="testimonials" className="py-24">
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
-            What Our <span className="text-gradient">Students Say</span>
+            {t("testimonials_title_1")} <span className="text-gradient">{t("testimonials_title_2")}</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Real feedback from real students.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("testimonials_subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
