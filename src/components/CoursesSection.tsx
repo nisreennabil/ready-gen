@@ -5,46 +5,47 @@ import courseEntrepreneurship from "@/assets/course-entrepreneurship.jpg";
 import courseScholarship from "@/assets/course-scholarship.jpg";
 import courseGraphicDesign from "@/assets/course-graphic-design.jpg";
 import courseSoftSkills from "@/assets/course-soft-skills.jpg";
-
-const courses = [
-  {
-    title: "Public Speaking",
-    image: coursePublicSpeaking,
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20course",
-  },
-  {
-    title: "Entrepreneurship",
-    image: courseEntrepreneurship,
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Entrepreneurship%20course",
-  },
-  {
-    title: "Scholarship",
-    image: courseScholarship,
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Scholarship%20course",
-  },
-  {
-    title: "Graphic Design",
-    image: courseGraphicDesign,
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
-  },
-  {
-    title: "Soft Skills",
-    image: courseSoftSkills,
-    wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Soft%20Skills%20course",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CoursesSection = () => {
+  const { t } = useLanguage();
+
+  const courses = [
+    {
+      title: t("course_public_speaking"),
+      image: coursePublicSpeaking,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20course",
+    },
+    {
+      title: t("course_entrepreneurship"),
+      image: courseEntrepreneurship,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Entrepreneurship%20course",
+    },
+    {
+      title: t("course_scholarship"),
+      image: courseScholarship,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Scholarship%20course",
+    },
+    {
+      title: t("course_graphic_design"),
+      image: courseGraphicDesign,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
+    },
+    {
+      title: t("course_soft_skills"),
+      image: courseSoftSkills,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Soft%20Skills%20course",
+    },
+  ];
+
   return (
     <section id="courses" className="py-24 bg-gradient-hero">
       <div className="container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black">
-            Our <span className="text-gradient">Courses</span>
+            {t("courses_title_1")} <span className="text-gradient">{t("courses_title_2")}</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Pick your path to confidence. Every course transforms you.
-          </p>
+          <p className="text-muted-foreground text-lg">{t("courses_subtitle")}</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
@@ -64,7 +65,7 @@ const CoursesSection = () => {
                 <h3 className="text-lg font-bold text-center">{c.title}</h3>
                 <a href={c.wa} target="_blank" rel="noopener noreferrer">
                   <Button variant="whatsapp" className="w-full rounded-xl gap-2">
-                    WhatsApp Us <ArrowUpRight className="w-4 h-4" />
+                    {t("courses_whatsapp")} <ArrowUpRight className="w-4 h-4" />
                   </Button>
                 </a>
               </div>

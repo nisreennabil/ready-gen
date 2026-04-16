@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import popupBg from "@/assets/popup-bg.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WA_LINK = "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Summer%20Courses";
 
 const PopupNotification = () => {
   const [visible, setVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 1500);
@@ -32,16 +34,16 @@ const PopupNotification = () => {
           <div className="absolute inset-0 bg-black/30" />
           <div className="relative z-10 space-y-2">
             <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-widest">
-              🔥 Limited Time
+              {t("popup_label")}
             </p>
             <h3 className="text-3xl font-black text-primary-foreground leading-tight">
-              Summer Courses Starting Soon
+              {t("popup_title")}
             </h3>
           </div>
 
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="relative z-10">
             <Button variant="whatsapp" size="lg" className="rounded-xl gap-2 px-8 py-5 text-base mt-2">
-              WhatsApp Us <ArrowUpRight className="w-4 h-4" />
+              {t("popup_button")} <ArrowUpRight className="w-4 h-4" />
             </Button>
           </a>
         </div>
