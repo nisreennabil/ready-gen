@@ -76,7 +76,7 @@ export const translations = {
 
     // CTA
     cta_title_1: "Are You Ready to",
-    cta_title_2: "Become Him?",
+    cta_title_2: "Become Better?",
     cta_subtitle: "Stop watching from the sidelines. Join the generation that leads, speaks, and wins.",
     cta_button: "Join Ready Gen Now",
 
@@ -173,7 +173,7 @@ export const translations = {
 
     // CTA
     cta_title_1: "هل أنت جاهز لتصبح",
-    cta_title_2: "مثله؟",
+    cta_title_2: "الأفضل؟",
     cta_subtitle: "توقّف عن المشاهدة من الخارج. انضم للجيل الذي يقود ويتحدث ويفوز.",
     cta_button: "انضم لريدي جين الآن",
 
