@@ -52,6 +52,41 @@ export const translations = {
     course_scholarship_course: "Scholarship Course",
     courses_whatsapp: "WhatsApp Us",
 
+    // Course briefs
+    course_ai_basics_prompting_b1: "Explore the fundamentals of Artificial Intelligence.",
+    course_ai_basics_prompting_b2: "Learn how AI tools are used in education and business.",
+    course_ai_basics_prompting_b3: "Master effective prompting techniques.",
+    course_ai_basics_prompting_b4: "Create projects using AI-powered tools.",
+
+    course_business_marketing_b1: "Understand business fundamentals.",
+    course_business_marketing_b2: "Learn how products and services are marketed.",
+    course_business_marketing_b3: "Explore entrepreneurship and startup concepts.",
+    course_business_marketing_b4: "Develop creative business ideas.",
+
+    course_content_creation_b1: "Develop engaging content ideas.",
+    course_content_creation_b2: "Learn storytelling and audience engagement.",
+    course_content_creation_b3: "Create content for different social media platforms.",
+    course_content_creation_b4: "Improve video and content planning skills.",
+
+    course_digital_marketing_b1: "Learn digital marketing essentials.",
+    course_digital_marketing_b2: "Understand social media marketing strategies.",
+    course_digital_marketing_b3: "Create effective online campaigns.",
+    course_digital_marketing_b4: "Analyze marketing performance and results.",
+
+    course_graphic_design_b1: "Learn the fundamentals of visual design.",
+    course_graphic_design_b2: "Create social media posts and marketing materials.",
+    course_graphic_design_b3: "Work with professional design tools.",
+    course_graphic_design_b4: "Build a beginner portfolio.",
+
+    course_public_speaking_soft_skills_b1: "Build confidence in speaking and presenting.",
+    course_public_speaking_soft_skills_b2: "Improve communication and teamwork skills.",
+    course_public_speaking_soft_skills_b3: "Learn leadership and problem-solving techniques.",
+    course_public_speaking_soft_skills_b4: "Deliver effective presentations.",
+
+    course_scholarship_course_b1: "Learn how to find local and international scholarships.",
+    course_scholarship_course_b2: "Build a strong application and personal statement.",
+    course_scholarship_course_b3: "Avoid common application mistakes.",
+    course_scholarship_course_b4: "Increase your chances of acceptance.",
 
     // Projects
     projects_title_1: "Our Students'",
@@ -96,7 +131,7 @@ export const translations = {
 
     // Popup
     popup_label: "🔥 Limited Time",
-    popup_title: "Summer Courses Starting Soon",
+    popup_title: "Book Your Course Now With 10% Discount",
     popup_button: "WhatsApp Us",
   },
   ar: {
@@ -152,6 +187,41 @@ export const translations = {
     course_scholarship_course: "دورة المنح الدراسية",
     courses_whatsapp: "تواصل عبر واتساب",
 
+    // Course briefs
+    course_ai_basics_prompting_b1: "استكشف أساسيات الذكاء الاصطناعي.",
+    course_ai_basics_prompting_b2: "تعلم كيف تُستخدم أدوات الذكاء الاصطناعي في التعليم والأعمال.",
+    course_ai_basics_prompting_b3: "أتقن تقنيات كتابة البرومبت الفعّالة.",
+    course_ai_basics_prompting_b4: "أنشئ مشاريع باستخدام أدوات الذكاء الاصطناعي.",
+
+    course_business_marketing_b1: "افهم أساسيات عالم الأعمال.",
+    course_business_marketing_b2: "تعلم كيف يتم تسويق المنتجات والخدمات.",
+    course_business_marketing_b3: "استكشف ريادة الأعمال ومفاهيم الشركات الناشئة.",
+    course_business_marketing_b4: "طوّر أفكاراً تجارية إبداعية.",
+
+    course_content_creation_b1: "طوّر أفكار محتوى جذّابة.",
+    course_content_creation_b2: "تعلم سرد القصص والتفاعل مع الجمهور.",
+    course_content_creation_b3: "أنشئ محتوى لمختلف منصات التواصل الاجتماعي.",
+    course_content_creation_b4: "حسّن مهارات تخطيط الفيديو والمحتوى.",
+
+    course_digital_marketing_b1: "تعلم أساسيات التسويق الرقمي.",
+    course_digital_marketing_b2: "افهم استراتيجيات التسويق عبر وسائل التواصل الاجتماعي.",
+    course_digital_marketing_b3: "أنشئ حملات إعلانية فعّالة عبر الإنترنت.",
+    course_digital_marketing_b4: "حلّل أداء ونتائج التسويق.",
+
+    course_graphic_design_b1: "تعلم أساسيات التصميم البصري.",
+    course_graphic_design_b2: "أنشئ منشورات السوشيال ميديا والمواد التسويقية.",
+    course_graphic_design_b3: "اعمل باستخدام أدوات التصميم الاحترافية.",
+    course_graphic_design_b4: "ابنِ معرض أعمال للمبتدئين.",
+
+    course_public_speaking_soft_skills_b1: "ابنِ ثقتك في التحدث والتقديم.",
+    course_public_speaking_soft_skills_b2: "حسّن مهارات التواصل والعمل الجماعي.",
+    course_public_speaking_soft_skills_b3: "تعلم تقنيات القيادة وحل المشكلات.",
+    course_public_speaking_soft_skills_b4: "قدّم عروضاً تقديمية مؤثرة.",
+
+    course_scholarship_course_b1: "تعلم كيف تجد المنح الدراسية المحلية والدولية.",
+    course_scholarship_course_b2: "ابنِ طلباً قوياً وبياناً شخصياً مميزاً.",
+    course_scholarship_course_b3: "تجنّب الأخطاء الشائعة عند التقديم.",
+    course_scholarship_course_b4: "زِد من فرص قبولك.",
 
     // Projects
     projects_title_1: "مشاريع",
@@ -196,7 +266,7 @@ export const translations = {
 
     // Popup
     popup_label: "🔥 لفترة محدودة",
-    popup_title: "دورات الصيف تبدأ قريباً",
+    popup_title: "احجز دورتك الآن بخصم 10٪",
     popup_button: "تواصل عبر واتساب",
   },
 } as const;

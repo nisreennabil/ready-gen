@@ -14,41 +14,48 @@ const CoursesSection = () => {
 
   const courses = [
     {
+      key: "ai_basics_prompting",
       title: t("course_ai_basics_prompting"),
       image: courseAiBasicsPrompting,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20AI%20Basics%20and%20Prompting%20course",
     },
     {
+      key: "business_marketing",
       title: t("course_business_marketing"),
       image: courseBusinessMarketing,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Business%20%26%20Marketing%20course",
     },
     {
+      key: "content_creation",
       title: t("course_content_creation"),
       image: courseContentCreation,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Content%20Creation%20course",
     },
     {
+      key: "digital_marketing",
       title: t("course_digital_marketing"),
       image: courseDigitalMarketing,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Digital%20Marketing%20course",
     },
     {
+      key: "graphic_design",
       title: t("course_graphic_design"),
       image: courseGraphicDesign,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
     },
     {
+      key: "public_speaking_soft_skills",
       title: t("course_public_speaking_soft_skills"),
       image: coursePublicSpeakingSoftSkills,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20%26%20Soft%20Skills%20course",
     },
     {
+      key: "scholarship_course",
       title: t("course_scholarship_course"),
       image: courseScholarship,
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Scholarship%20course",
     },
-  ];
+  ] as const;
 
   return (
     <section id="courses" className="py-24 bg-gradient-hero">
@@ -63,7 +70,7 @@ const CoursesSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {courses.map((c) => (
             <div
-              key={c.title}
+              key={c.key}
               className="card-glow group bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
             >
               <div className="aspect-[4/5] overflow-hidden">
@@ -73,9 +80,17 @@ const CoursesSection = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-5 flex flex-col gap-3">
+              <div className="p-5 flex flex-col gap-3 flex-1">
                 <h3 className="text-lg font-bold text-center">{c.title}</h3>
-                <a href={c.wa} target="_blank" rel="noopener noreferrer">
+                <ul className="space-y-1.5 text-sm text-muted-foreground flex-1">
+                  {[1, 2, 3, 4].map((i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-primary mt-0.5 shrink-0">•</span>
+                      <span>{t(`course_${c.key}_b${i}` as never)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={c.wa} target="_blank" rel="noopener noreferrer" className="mt-auto">
                   <Button variant="whatsapp" className="w-full rounded-xl gap-2">
                     {t("courses_whatsapp")} <ArrowUpRight className="w-4 h-4" />
                   </Button>
