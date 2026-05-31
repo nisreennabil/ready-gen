@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import coursePublicSpeaking from "@/assets/course-public-speaking.jpg";
-import courseEntrepreneurship from "@/assets/course-entrepreneurship.jpg";
-import courseScholarship from "@/assets/course-scholarship.jpg";
-import courseGraphicDesign from "@/assets/course-graphic-design.jpg";
-import courseSoftSkills from "@/assets/course-soft-skills.jpg";
+import courseAiBasicsPrompting from "@/assets/course-ai-basics-prompting.png";
+import courseBusinessMarketing from "@/assets/course-business-marketing.png";
+import courseContentCreation from "@/assets/course-content-creation.png";
+import courseDigitalMarketing from "@/assets/course-digital-marketing.png";
+import courseGraphicDesign from "@/assets/course-graphic-design-new.png";
+import coursePublicSpeakingSoftSkills from "@/assets/course-public-speaking-soft-skills.png";
+import courseScholarship from "@/assets/course-scholarship-new.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const CoursesSection = () => {
@@ -12,19 +14,24 @@ const CoursesSection = () => {
 
   const courses = [
     {
-      title: t("course_public_speaking"),
-      image: coursePublicSpeaking,
-      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20course",
+      title: t("course_ai_basics_prompting"),
+      image: courseAiBasicsPrompting,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20AI%20Basics%20and%20Prompting%20course",
     },
     {
-      title: t("course_entrepreneurship"),
-      image: courseEntrepreneurship,
-      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Entrepreneurship%20course",
+      title: t("course_business_marketing"),
+      image: courseBusinessMarketing,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Business%20%26%20Marketing%20course",
     },
     {
-      title: t("course_scholarship"),
-      image: courseScholarship,
-      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Scholarship%20course",
+      title: t("course_content_creation"),
+      image: courseContentCreation,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Content%20Creation%20course",
+    },
+    {
+      title: t("course_digital_marketing"),
+      image: courseDigitalMarketing,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Digital%20Marketing%20course",
     },
     {
       title: t("course_graphic_design"),
@@ -32,9 +39,14 @@ const CoursesSection = () => {
       wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Graphic%20Design%20course",
     },
     {
-      title: t("course_soft_skills"),
-      image: courseSoftSkills,
-      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Soft%20Skills%20course",
+      title: t("course_public_speaking_soft_skills"),
+      image: coursePublicSpeakingSoftSkills,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Public%20Speaking%20%26%20Soft%20Skills%20course",
+    },
+    {
+      title: t("course_scholarship_course"),
+      image: courseScholarship,
+      wa: "https://wa.me/201007705216?text=Hey%20I%20am%20interested%20in%20the%20Scholarship%20course",
     },
   ];
 
@@ -48,7 +60,7 @@ const CoursesSection = () => {
           <p className="text-muted-foreground text-lg">{t("courses_subtitle")}</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {courses.map((c) => (
             <div
               key={c.title}

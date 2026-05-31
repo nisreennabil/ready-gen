@@ -43,12 +43,15 @@ export const translations = {
     courses_title_1: "Our",
     courses_title_2: "Courses",
     courses_subtitle: "Pick your path to confidence. Every course transforms you.",
-    course_public_speaking: "Public Speaking",
-    course_entrepreneurship: "Entrepreneurship",
-    course_scholarship: "Scholarship",
+    course_ai_basics_prompting: "AI Basics And Prompting",
+    course_business_marketing: "Business & Marketing",
+    course_content_creation: "Content Creation",
+    course_digital_marketing: "Digital Marketing",
     course_graphic_design: "Graphic Design",
-    course_soft_skills: "Soft Skills",
+    course_public_speaking_soft_skills: "Public Speaking & Soft Skills",
+    course_scholarship_course: "Scholarship Course",
     courses_whatsapp: "WhatsApp Us",
+
 
     // Projects
     projects_title_1: "Our Students'",
@@ -140,12 +143,15 @@ export const translations = {
     courses_title_1: "دوراتنا",
     courses_title_2: "",
     courses_subtitle: "اختر طريقك إلى الثقة. كل دورة تُحدث تحولاً فيك.",
-    course_public_speaking: "التحدث أمام الجمهور",
-    course_entrepreneurship: "ريادة الأعمال",
-    course_scholarship: "المنح الدراسية",
+    course_ai_basics_prompting: "أساسيات الذكاء الاصطناعي وكتابة البرومبت",
+    course_business_marketing: "الأعمال والتسويق",
+    course_content_creation: "صناعة المحتوى",
+    course_digital_marketing: "التسويق الرقمي",
     course_graphic_design: "التصميم الجرافيكي",
-    course_soft_skills: "المهارات الشخصية",
+    course_public_speaking_soft_skills: "التحدث أمام الجمهور والمهارات الشخصية",
+    course_scholarship_course: "دورة المنح الدراسية",
     courses_whatsapp: "تواصل عبر واتساب",
+
 
     // Projects
     projects_title_1: "مشاريع",
